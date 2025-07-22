@@ -24,5 +24,18 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "vite": "^7.0.4"
-  }
+  },
+  "description": "<<<<<<< HEAD\r # React + Vite",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadrajpoot14/Todo-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmadrajpoot14/Todo-App/issues"
+  },
+  "homepage": "https://github.com/ahmadrajpoot14/Todo-App#readme"
 }
