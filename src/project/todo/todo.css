@@ -19,25 +19,20 @@ section {
 
 .error-message {
     color: #f7f7f7;
-    /* red color for error */
     font-size: 1.4rem;
     margin: 0.5rem 0;
     text-align: center;
 }
 
-
 .all-task {
-    color: white !important;
     font-size: 24px;
     font-weight: 600;
     color: #333;
     margin-bottom: 16px;
     border-bottom: 2px solid #c9ccce;
-    /* subtle underline */
     padding-bottom: 8px;
     letter-spacing: 0.5px;
 }
-
 
 .header,
 .form,
@@ -92,7 +87,6 @@ form input {
     letter-spacing: 0.1rem;
     border: none;
     outline: none;
-    /* border-radius: 15; */
     border-top-left-radius: 17px;
     border-bottom-left-radius: 17px;
     max-width: 500px;
@@ -146,20 +140,13 @@ span {
     max-height: 45vh;
 }
 
-
 .todo-list {
     min-width: 25%;
-
-    /* To remove the bullets of unordered list */
     list-style: none;
 }
 
 .todo-item {
     margin: 2.4rem;
-    /*word-wrap: break-word;
-*/
-    /*flex-wrap: wrap;
-*/
     font-size: 20px;
     color: #1c2833;
     border-radius: 30px;
@@ -172,9 +159,6 @@ span {
     grid-template-columns: 1fr 0.3fr 0.3fr;
     justify-content: start;
     gap: 1.6rem;
-    /*align-items: center;
-*/
-    /*wrapsthelinks*/
     overflow-wrap: anywhere;
 }
 
@@ -213,8 +197,6 @@ li span {
 .notCheckList {
     text-decoration: none;
 }
-
-
 
 .clear-btn:hover {
     background-color: #8d1407;
@@ -277,28 +259,51 @@ li span {
     margin-top: 30px;
 }
 
-.see-more-btn {
+.see-more-btn,
+.clear-btn {
     background-color: #e74c3c;
+    color: rgb(29, 28, 28);
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding: 12px 24px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    max-width: 90%;
+    margin: 12px auto;
     display: block;
-    max-width: 200px;
-    margin: 10px auto;
-    padding: 12px;
-    font-size: 16px;
-    box-sizing: border-box;
-    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
-@media (max-width: 480px) {
-    .todo-modal {
-        width: 90vw;
-        padding: 15px;
-        font-size: 14px;
+.see-more-btn:hover,
+.clear-btn:hover {
+    background-color: #c0392b;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+@media (max-width: 600px) {
+    .myUnOrdList {
+        max-height: none; /* Allow full height on mobile */
+        padding: 0 1rem; /* Padding so tasks don’t touch edges */
     }
 
-    button.see-more-btn,
-    button.clear-btn {
-        max-width: 100%;
-        font-size: 14px;
-        padding: 10px;
+    .see-more-btn,
+    .clear-btn {
+        display: block;
+        width: 90%;
+        margin: 0.5rem auto;
+    }
+
+    form input {
+        font-size: 1.5rem;
+    }
+
+    form button {
+        font-size: 1.5rem;
+        min-width: 80px;
     }
 }
