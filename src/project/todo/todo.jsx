@@ -60,7 +60,7 @@ export const Todo = () => {
 
                 <section className="myUnOrdList">
                     <ul>
-                        {task.slice(0, 4).map((curTask) => (
+                        {task.slice(0, 3).map((curTask) => (
                             <TodoList
                                 key={curTask.id}
                                 data={curTask.content}
@@ -71,7 +71,7 @@ export const Todo = () => {
                         ))}
                     </ul>
 
-                    {task.length > 4 && (
+                    {task.length > 3 && (
                         <button className="see-more-btn" onClick={() => setShowModal(true)}>
                             See More
                         </button>
@@ -87,7 +87,7 @@ export const Todo = () => {
 
             {showModal && (
                 <TodoModal
-                    tasks={task.slice(4)}
+                    tasks={task.slice(3)}
                     onClose={() => setShowModal(false)}
                     onDelete={handleDeletetodo}
                     onCheck={handleChecktodo}
